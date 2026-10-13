@@ -63,7 +63,8 @@
   .btn small { display: block; font-weight: 400; font-size: .8rem; opacity: .8 }
   .btn.main { background: #fff; color: var(--navy) }
   .btn.alt { border: 1px solid rgba(255,255,255,.4); color: #fff }
-  @media (min-width: 40rem) { .get { grid-template-columns: 1fr 1fr } .get .main { grid-column: 1 / -1 } }
+  /* Κάθε γλώσσα δείχνει ΜΟΝΟ το δικό της poster και περίληψη (απόφαση χρήστη 13/10) */
+  @media (min-width: 40rem) { .get { grid-template-columns: 1fr 1fr } }
 
   /* ---------- εύρημα */
   main section { padding: 2rem 0; border-bottom: 1px solid var(--rule) }
@@ -168,14 +169,6 @@
       <a class="btn main" href="pdf/poster-en.pdf" lang="en">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg>
         <span>The poster as PDF<small>A0, English · <span data-size="pdf/poster-en.pdf"></span></small></span>
-      </a>
-      <a class="btn alt" href="pdf/poster-en.pdf" lang="el">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg>
-        <span>Το poster στα αγγλικά<small>PDF, A0 · <span data-size="pdf/poster-en.pdf"></span></small></span>
-      </a>
-      <a class="btn alt" href="pdf/poster-el.pdf" lang="en">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg>
-        <span>The poster in Greek<small>PDF, A0 · <span data-size="pdf/poster-el.pdf"></span></small></span>
       </a>
       <a class="btn alt" href="pdf/abstract-el.pdf" lang="el">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>
