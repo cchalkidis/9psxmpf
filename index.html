@@ -119,6 +119,9 @@
   /* ---------- περίληψη, αναφορές, επικοινωνία */
   .abstract p { margin: 0 0 1rem; hyphens: auto }
   .abstract div p:last-child { margin-bottom: 0 }
+  /* Σχήμα 1: στο κινητό τα πάνελ το ένα κάτω από το άλλο, σε φαρδιά οθόνη δίπλα δίπλα (πλάτη ∝ mm) */
+  .absfig .pair { display: flex; flex-direction: column; gap: 1rem }
+  @media (min-width: 40rem) { .absfig .pair { flex-direction: row; align-items: flex-start } .absfig .pair a { flex-basis: 0 } }
   .refs { margin: 0; padding-left: 0; list-style: none }
   .refs li { margin: 0 0 .9rem; padding-left: 1.5rem; text-indent: -1.5rem; font-size: .92rem; line-height: 1.45;
              overflow-wrap: anywhere }
@@ -182,19 +185,34 @@
 
 <main class="wrap">
 
-  <!-- ===================== ΠΕΡΙΛΗΨΗ, πριν από το poster (απόφαση χρήστη 13/10· perilipsi\keimeno_EL_v3.txt / keimeno_EN_v3.txt· χωρίς το «(Σχήμα 1)», που εδώ δεν υπάρχει) ===================== -->
+  <!-- ===================== ΠΕΡΙΛΗΨΗ, πριν από το poster (απόφαση χρήστη 13/10· perilipsi\keimeno_EL_v3.txt / keimeno_EN_v3.txt, αυτούσια μαζί με το Σχήμα 1 και τη λεζάντα του) ===================== -->
   <section id="abstract" class="abstract">
     <h2><span lang="el">Περίληψη</span><span lang="en">Abstract</span></h2>
     <div lang="el">
       <p>Τα δυναμικά μηχανικής μάθησης, όπως τα Gaussian Approximation Potentials (GAP; Bartók et al., 2010), προσεγγίζουν την κβαντομηχανική ακρίβεια με κόστος μικρότερο κατά τάξεις μεγέθους, μεταθέτουν όμως τον περιορισμό τους από την αναλυτική μορφή στα δεδομένα, των οποίων η επαναληπτική επιμέλεια απαιτεί χρόνο και εξειδίκευση. Εξετάζεται τι ακρίβεια προκύπτει χωρίς καμία επιμέλεια και τι την περιορίζει. Σύνολα εκπαίδευσης 50 έως 2.000 δομών αντλήθηκαν με στρωματοποιημένη τυχαία δειγματοληψία από την ίδια βάση δεδομένων 17.525 διαμορφώσεων άνθρακα από την οποία προήλθε με επιμέλεια το δημοσιευμένο δυναμικό GAP-20 (Rowe et al., 2020). Εκπαιδεύτηκαν 1.040 δυναμικά με περιγραφέα SOAP (Bartók et al., 2013), σε οκτώ ρυθμίσεις με δέκα επαναλήψεις ανά μέγεθος, και αξιολογήθηκαν σε κοινό σύνολο 203 δομών.</p>
-      <p>Το σφάλμα ενέργειας μειώνεται κατά 43% έως τις 700 περίπου δομές και αυξάνεται κατά 6,6% έως τις 2.000, όχι λόγω υπερπροσαρμογής αλλά εξαιτίας σπάνιων απωστικών δομών με ακραίες δυνάμεις, που εισέρχονται συχνότερα στα μεγαλύτερα σύνολα και υποβαθμίζουν την προσαρμογή. Η δεκαπλάσια χωρητικότητα (από 300 σε 3.000 αντιπροσωπευτικά σημεία) μειώνει το σφάλμα κατά 40,5%, όχι όμως τον ρυθμό αστοχίας στις απωστικές δομές, όπου και το GAP-20 έχει σφάλμα 33 φορές μεγαλύτερο απ’ ό,τι στις υπόλοιπες. Στις 116 δομές αξιολόγησης που δεν είδε ούτε το GAP-20, το καλύτερο δυναμικό φτάνει 0,0093 eV/άτομο έναντι 0,0103 του GAP-20, με 1.000 τυχαίες δομές αντί για 6.088 επιμελημένες· υπερέχει στις τεταγμένες και υστερεί στις άτακτες δομές.</p>
+      <p>Το σφάλμα ενέργειας μειώνεται κατά 43% έως τις 700 περίπου δομές και αυξάνεται κατά 6,6% έως τις 2.000, όχι λόγω υπερπροσαρμογής αλλά εξαιτίας σπάνιων απωστικών δομών με ακραίες δυνάμεις, που εισέρχονται συχνότερα στα μεγαλύτερα σύνολα και υποβαθμίζουν την προσαρμογή. Η δεκαπλάσια χωρητικότητα (από 300 σε 3.000 αντιπροσωπευτικά σημεία) μειώνει το σφάλμα κατά 40,5%, όχι όμως τον ρυθμό αστοχίας στις απωστικές δομές, όπου και το GAP-20 έχει σφάλμα 33 φορές μεγαλύτερο απ’ ό,τι στις υπόλοιπες. Στις 116 δομές αξιολόγησης που δεν είδε ούτε το GAP-20, το καλύτερο δυναμικό φτάνει 0,0093 eV/άτομο έναντι 0,0103 του GAP-20, με 1.000 τυχαίες δομές αντί για 6.088 επιμελημένες (Σχήμα 1)· υπερέχει στις τεταγμένες και υστερεί στις άτακτες δομές.</p>
       <p>Ο δεσμευτικός περιορισμός της ακρίβειας βρίσκεται επομένως στα δεδομένα, όχι στο μοντέλο· η επιμέλεια δεν είναι προαπαιτούμενο αλλά ένας από τους διαθέσιμους μοχλούς.</p>
     </div>
     <div lang="en">
       <p>Machine learning potentials such as Gaussian Approximation Potentials (GAP; Bartók et al., 2010) approach quantum-mechanical accuracy at a cost orders of magnitude lower, but they shift their limitation from the functional form to the data, whose iterative curation demands time and expertise. We examine what accuracy is obtained without any curation, and what limits it. Training sets of 50 to 2,000 structures were drawn by stratified random sampling from the same database of 17,525 carbon configurations from which the published GAP-20 potential was curated (Rowe et al., 2020). We trained 1,040 potentials with the SOAP descriptor (Bartók et al., 2013), in eight model settings with ten repetitions per size, and evaluated them on a common set of 203 structures.</p>
-      <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones; it is better on ordered structures and worse on disordered ones.</p>
+      <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones (Figure 1); it is better on ordered structures and worse on disordered ones.</p>
       <p>The binding constraint on accuracy therefore lies in the data, not in the model; curation is not a prerequisite but one of the available levers.</p>
     </div>
+    <!-- Σχήμα 1 της περίληψης (perilipsi\fig_perilipsi_*.pdf), κομμένο σε α/β από το enimerosi.py· λεζάντα αυτούσια -->
+    <figure class="absfig">
+      <div class="pair" lang="el">
+        <a class="zoom" href="figures/abstract-a-el.svg" style="flex-grow: 87.9"><img src="figures/abstract-a-el.svg" alt="(α) Διάμεσο σφάλμα ενέργειας ανά μέγεθος συνόλου εκπαίδευσης: P1c (900 σημεία), P1f (3.000 σημεία) και GAP-20· 0,90× στις 1.000 δομές" width="249" height="128"></a>
+        <a class="zoom" href="figures/abstract-b-el.svg" style="flex-grow: 72.1"><img src="figures/abstract-b-el.svg" alt="(β) Λόγος σφάλματος P1f / GAP-20 ανά οικογένεια δομών: κάτω από 1 στις τεταγμένες (π.χ. γραφένιο), πάνω από 1 στις άτακτες (π.χ. άμορφες επιφάνειες)" width="204" height="128"></a>
+      </div>
+      <div class="pair" lang="en">
+        <a class="zoom" href="figures/abstract-a-en.svg" style="flex-grow: 88.4"><img src="figures/abstract-a-en.svg" alt="(a) Median energy error against training-set size: P1c (900 points), P1f (3,000 points) and GAP-20; 0.90× at 1,000 structures" width="251" height="128"></a>
+        <a class="zoom" href="figures/abstract-b-en.svg" style="flex-grow: 71.6"><img src="figures/abstract-b-en.svg" alt="(b) Error ratio P1f / GAP-20 per structural family: below 1 for ordered structures (e.g. graphene), above 1 for disordered ones (e.g. amorphous surfaces)" width="203" height="128"></a>
+      </div>
+      <figcaption class="cap">
+        <span lang="el"><b>Σχήμα 1.</b> (α) Διάμεσο |Δ<i>E</i>| στις 116 δομές που κανένα μοντέλο δεν είδε (σκίαση: ±1 τυπική απόκλιση μεταξύ επαναλήψεων). (β) Λόγος σφάλματος P1f/GAP-20 ανά οικογένεια, στις 1.000 δομές.</span>
+        <span lang="en"><b>Figure 1.</b> (a) Median |Δ<i>E</i>| on the 116 structures that no model had seen (shading: ±1 standard deviation across repeats). (b) Error ratio P1f/GAP-20 per structural family, at 1,000 structures.</span>
+      </figcaption>
+    </figure>
   </section>
 
   <!-- ===================== ΕΡΩΤΗΜΑ ΚΑΙ ΕΥΡΗΜΑ (poster v2, ζώνη ευρήματος) ===================== -->
