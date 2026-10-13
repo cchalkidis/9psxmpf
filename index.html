@@ -117,10 +117,8 @@
   .coda p b { color: #fff }
 
   /* ---------- περίληψη, αναφορές, επικοινωνία */
-  details { border: 1px solid var(--rule); border-radius: 8px; padding: 0 1rem }
-  summary { min-height: 3rem; display: flex; align-items: center; cursor: pointer; font-weight: 600; color: var(--navy) }
-  details[open] summary { border-bottom: 1px solid var(--rule); margin-bottom: 1rem }
-  details p { margin: 0 0 1rem; hyphens: auto }
+  .abstract p { margin: 0 0 1rem; hyphens: auto }
+  .abstract div p:last-child { margin-bottom: 0 }
   .refs { margin: 0; padding-left: 0; list-style: none }
   .refs li { margin: 0 0 .9rem; padding-left: 1.5rem; text-indent: -1.5rem; font-size: .92rem; line-height: 1.45;
              overflow-wrap: anywhere }
@@ -183,6 +181,21 @@
 </header>
 
 <main class="wrap">
+
+  <!-- ===================== ΠΕΡΙΛΗΨΗ, πριν από το poster (απόφαση χρήστη 13/10· perilipsi\keimeno_EL_v3.txt / keimeno_EN_v3.txt· χωρίς το «(Σχήμα 1)», που εδώ δεν υπάρχει) ===================== -->
+  <section id="abstract" class="abstract">
+    <h2><span lang="el">Περίληψη</span><span lang="en">Abstract</span></h2>
+    <div lang="el">
+      <p>Τα δυναμικά μηχανικής μάθησης, όπως τα Gaussian Approximation Potentials (GAP; Bartók et al., 2010), προσεγγίζουν την κβαντομηχανική ακρίβεια με κόστος μικρότερο κατά τάξεις μεγέθους, μεταθέτουν όμως τον περιορισμό τους από την αναλυτική μορφή στα δεδομένα, των οποίων η επαναληπτική επιμέλεια απαιτεί χρόνο και εξειδίκευση. Εξετάζεται τι ακρίβεια προκύπτει χωρίς καμία επιμέλεια και τι την περιορίζει. Σύνολα εκπαίδευσης 50 έως 2.000 δομών αντλήθηκαν με στρωματοποιημένη τυχαία δειγματοληψία από την ίδια βάση δεδομένων 17.525 διαμορφώσεων άνθρακα από την οποία προήλθε με επιμέλεια το δημοσιευμένο δυναμικό GAP-20 (Rowe et al., 2020). Εκπαιδεύτηκαν 1.040 δυναμικά με περιγραφέα SOAP (Bartók et al., 2013), σε οκτώ ρυθμίσεις με δέκα επαναλήψεις ανά μέγεθος, και αξιολογήθηκαν σε κοινό σύνολο 203 δομών.</p>
+      <p>Το σφάλμα ενέργειας μειώνεται κατά 43% έως τις 700 περίπου δομές και αυξάνεται κατά 6,6% έως τις 2.000, όχι λόγω υπερπροσαρμογής αλλά εξαιτίας σπάνιων απωστικών δομών με ακραίες δυνάμεις, που εισέρχονται συχνότερα στα μεγαλύτερα σύνολα και υποβαθμίζουν την προσαρμογή. Η δεκαπλάσια χωρητικότητα (από 300 σε 3.000 αντιπροσωπευτικά σημεία) μειώνει το σφάλμα κατά 40,5%, όχι όμως τον ρυθμό αστοχίας στις απωστικές δομές, όπου και το GAP-20 έχει σφάλμα 33 φορές μεγαλύτερο απ’ ό,τι στις υπόλοιπες. Στις 116 δομές αξιολόγησης που δεν είδε ούτε το GAP-20, το καλύτερο δυναμικό φτάνει 0,0093 eV/άτομο έναντι 0,0103 του GAP-20, με 1.000 τυχαίες δομές αντί για 6.088 επιμελημένες· υπερέχει στις τεταγμένες και υστερεί στις άτακτες δομές.</p>
+      <p>Ο δεσμευτικός περιορισμός της ακρίβειας βρίσκεται επομένως στα δεδομένα, όχι στο μοντέλο· η επιμέλεια δεν είναι προαπαιτούμενο αλλά ένας από τους διαθέσιμους μοχλούς.</p>
+    </div>
+    <div lang="en">
+      <p>Machine learning potentials such as Gaussian Approximation Potentials (GAP; Bartók et al., 2010) approach quantum-mechanical accuracy at a cost orders of magnitude lower, but they shift their limitation from the functional form to the data, whose iterative curation demands time and expertise. We examine what accuracy is obtained without any curation, and what limits it. Training sets of 50 to 2,000 structures were drawn by stratified random sampling from the same database of 17,525 carbon configurations from which the published GAP-20 potential was curated (Rowe et al., 2020). We trained 1,040 potentials with the SOAP descriptor (Bartók et al., 2013), in eight model settings with ten repetitions per size, and evaluated them on a common set of 203 structures.</p>
+      <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones; it is better on ordered structures and worse on disordered ones.</p>
+      <p>The binding constraint on accuracy therefore lies in the data, not in the model; curation is not a prerequisite but one of the available levers.</p>
+    </div>
+  </section>
 
   <!-- ===================== ΕΡΩΤΗΜΑ ΚΑΙ ΕΥΡΗΜΑ (poster v2, ζώνη ευρήματος) ===================== -->
   <section>
@@ -352,24 +365,6 @@
       <span lang="el"><b>Περιορισμοί:</b> μόνο 3 απωστικές δομές αξιολόγησης· η αξιολόγηση προέρχεται από την ίδια βάση με τα δείγματά μας, άρα το 0,90 είναι ένδειξη ισοδυναμίας.</span>
       <span lang="en"><b>Limitations:</b> only 3 repulsive evaluation structures; the evaluation set comes from the same database as our samples, so the 0.90 is an indication of equivalence.</span>
     </p>
-  </section>
-
-  <!-- ===================== ΠΕΡΙΛΗΨΗ (perilipsi\keimeno_EL_v3.txt / keimeno_EN_v3.txt· χωρίς το «(Σχήμα 1)», που εδώ δεν υπάρχει) ===================== -->
-  <section id="abstract">
-    <h2><span lang="el">Περίληψη</span><span lang="en">Abstract</span></h2>
-    <details>
-      <summary><span lang="el">Το κείμενο της περίληψης</span><span lang="en">The abstract text</span></summary>
-      <div lang="el">
-        <p>Τα δυναμικά μηχανικής μάθησης, όπως τα Gaussian Approximation Potentials (GAP; Bartók et al., 2010), προσεγγίζουν την κβαντομηχανική ακρίβεια με κόστος μικρότερο κατά τάξεις μεγέθους, μεταθέτουν όμως τον περιορισμό τους από την αναλυτική μορφή στα δεδομένα, των οποίων η επαναληπτική επιμέλεια απαιτεί χρόνο και εξειδίκευση. Εξετάζεται τι ακρίβεια προκύπτει χωρίς καμία επιμέλεια και τι την περιορίζει. Σύνολα εκπαίδευσης 50 έως 2.000 δομών αντλήθηκαν με στρωματοποιημένη τυχαία δειγματοληψία από την ίδια βάση δεδομένων 17.525 διαμορφώσεων άνθρακα από την οποία προήλθε με επιμέλεια το δημοσιευμένο δυναμικό GAP-20 (Rowe et al., 2020). Εκπαιδεύτηκαν 1.040 δυναμικά με περιγραφέα SOAP (Bartók et al., 2013), σε οκτώ ρυθμίσεις με δέκα επαναλήψεις ανά μέγεθος, και αξιολογήθηκαν σε κοινό σύνολο 203 δομών.</p>
-        <p>Το σφάλμα ενέργειας μειώνεται κατά 43% έως τις 700 περίπου δομές και αυξάνεται κατά 6,6% έως τις 2.000, όχι λόγω υπερπροσαρμογής αλλά εξαιτίας σπάνιων απωστικών δομών με ακραίες δυνάμεις, που εισέρχονται συχνότερα στα μεγαλύτερα σύνολα και υποβαθμίζουν την προσαρμογή. Η δεκαπλάσια χωρητικότητα (από 300 σε 3.000 αντιπροσωπευτικά σημεία) μειώνει το σφάλμα κατά 40,5%, όχι όμως τον ρυθμό αστοχίας στις απωστικές δομές, όπου και το GAP-20 έχει σφάλμα 33 φορές μεγαλύτερο απ’ ό,τι στις υπόλοιπες. Στις 116 δομές αξιολόγησης που δεν είδε ούτε το GAP-20, το καλύτερο δυναμικό φτάνει 0,0093 eV/άτομο έναντι 0,0103 του GAP-20, με 1.000 τυχαίες δομές αντί για 6.088 επιμελημένες· υπερέχει στις τεταγμένες και υστερεί στις άτακτες δομές.</p>
-        <p>Ο δεσμευτικός περιορισμός της ακρίβειας βρίσκεται επομένως στα δεδομένα, όχι στο μοντέλο· η επιμέλεια δεν είναι προαπαιτούμενο αλλά ένας από τους διαθέσιμους μοχλούς.</p>
-      </div>
-      <div lang="en">
-        <p>Machine learning potentials such as Gaussian Approximation Potentials (GAP; Bartók et al., 2010) approach quantum-mechanical accuracy at a cost orders of magnitude lower, but they shift their limitation from the functional form to the data, whose iterative curation demands time and expertise. We examine what accuracy is obtained without any curation, and what limits it. Training sets of 50 to 2,000 structures were drawn by stratified random sampling from the same database of 17,525 carbon configurations from which the published GAP-20 potential was curated (Rowe et al., 2020). We trained 1,040 potentials with the SOAP descriptor (Bartók et al., 2013), in eight model settings with ten repetitions per size, and evaluated them on a common set of 203 structures.</p>
-        <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones; it is better on ordered structures and worse on disordered ones.</p>
-        <p>The binding constraint on accuracy therefore lies in the data, not in the model; curation is not a prerequisite but one of the available levers.</p>
-      </div>
-    </details>
   </section>
 
   <!-- ===================== ΑΝΑΦΟΡΕΣ (APA 7, αυτούσιες από perilipsi\build_docx.py) ===================== -->
