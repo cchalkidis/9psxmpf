@@ -16,10 +16,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<!-- Σελίδα προορισμού του QR του poster (BRIEF §5, οδηγός §5).
-     Ψηφιακή εκδοχή του poster v2 (poster\v2\poster_EL_v2.html): ίδια σειρά, ίδια κείμενα, ίδια χρώματα.
-     Αριθμοί: ΜΟΝΟ όσοι υπάρχουν στο poster v2 ή στην περίληψη (keimeno_*_v3.txt)· έλεγχος: enimerosi.py.
-     Αρχεία (PDF, SVG): τα αντιγράφει το enimerosi.py από τις πηγές τους — μην τα αλλάζεις εδώ. -->
 <style>
   :root {
     --ink: #111111; --body: #262522; --cap: #3d3b36; --muted: #6f6d66;
@@ -38,10 +34,10 @@
   .blue { color: var(--blue) } .red { color: var(--red) }
   .wrap { max-width: var(--w); margin: 0 auto; padding: 0 1rem }
 
-  /* Μόνο η ενεργή γλώσσα φαίνεται· χωρίς JavaScript μένει η ελληνική */
+  /* Show only the active language (Greek if JavaScript is off) */
   html[lang="el"] [lang="en"], html[lang="en"] [lang="el"] { display: none !important }
 
-  /* ---------- κεφαλίδα */
+  /* Header */
   header { background: var(--navy); color: #fff }
   header .wrap { padding-top: .9rem; padding-bottom: 1.6rem }
   .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem }
@@ -63,10 +59,9 @@
   .btn small { display: block; font-weight: 400; font-size: .8rem; opacity: .8 }
   .btn.main { background: #fff; color: var(--navy) }
   .btn.alt { border: 1px solid rgba(255,255,255,.4); color: #fff }
-  /* Κάθε γλώσσα δείχνει ΜΟΝΟ το δικό της poster και περίληψη (απόφαση χρήστη 13/10) */
   @media (min-width: 40rem) { .get { grid-template-columns: 1fr 1fr } }
 
-  /* ---------- εύρημα */
+  /* Finding */
   main section { padding: 2rem 0; border-bottom: 1px solid var(--rule) }
   .ask { margin: 0 0 .5rem; font-weight: 600; color: var(--navy); line-height: 1.3 }
   .claim { margin: 0; font-size: clamp(1.5rem, 1.15rem + 1.9vw, 2.3rem); line-height: 1.15; font-weight: 700; color: var(--ink);
@@ -80,7 +75,7 @@
   .err { display: flex; align-items: center; gap: .5rem; font-size: .85rem; color: var(--muted) }
   .err .lab { width: 3.6rem; flex: none }
   .err .track { flex: 1; display: flex; align-items: center; gap: .5rem }
-  /* ίδιο μηδέν και για τις δύο μπάρες· μήκος ∝ σφάλμα, GAP-20 = 78% του διαθέσιμου */
+  /* Both bars start from the same zero; length is proportional to the error */
   .err .bar { height: .8rem; width: calc(78% * var(--v) / 0.0103); flex: none }
   .err .bar.red { background: var(--red) } .err .bar.blue { background: var(--blue) }
   .err .val { font-weight: 700; font-size: 1.15rem; line-height: 1 }
@@ -101,7 +96,7 @@
   .eq { font-weight: 700; color: var(--navy) }
   .eq span { font-weight: 400; color: var(--cap) }
 
-  /* ---------- οι τρεις ενδείξεις */
+  /* Three lines of evidence */
   .band { background: var(--tint); margin: 0 -1rem; padding: 2rem 1rem; border-bottom: 0 }
   .panel { margin-top: 1.6rem }
   .panel h3 { display: flex; gap: .5rem; margin: 0 0 .6rem; font-size: 1.05rem; line-height: 1.3; font-weight: 600; color: var(--ink) }
@@ -109,17 +104,17 @@
   .panel figure { margin-top: 0 }
   .panel figure a.zoom { padding: .6rem }
 
-  /* ---------- συμπέρασμα */
+  /* Conclusion */
   .coda { background: var(--navy); color: #fff; margin: 0 -1rem; padding: 1.8rem 1rem; border-bottom: 0 }
   .coda .lead { margin: 0; font-size: 1.3rem; line-height: 1.25; font-weight: 700; text-wrap: balance }
   .coda .lead span { display: block; margin-top: .4rem; font-size: 1.05rem; font-weight: 400; color: var(--onnavy) }
   .coda p:not(.lead) { margin: 1rem 0 0; font-size: .95rem; color: var(--onnavy) }
   .coda p b { color: #fff }
 
-  /* ---------- περίληψη, αναφορές, επικοινωνία */
+  /* Abstract, references, contact */
   .abstract p { margin: 0 0 1rem; hyphens: auto }
   .abstract div p:last-child { margin-bottom: 0 }
-  /* Σχήμα 1: στο κινητό τα πάνελ το ένα κάτω από το άλλο, σε φαρδιά οθόνη δίπλα δίπλα (πλάτη ∝ mm) */
+  /* Figure 1: panels stacked on phones, side by side on wider screens */
   .absfig .pair { display: flex; flex-direction: column; gap: 1rem }
   @media (min-width: 40rem) { .absfig .pair { flex-direction: row; align-items: flex-start } .absfig .pair a { flex-basis: 0 } }
   .refs { margin: 0; padding-left: 0; list-style: none }
@@ -185,7 +180,6 @@
 
 <main class="wrap">
 
-  <!-- ===================== ΠΕΡΙΛΗΨΗ, πριν από το poster (απόφαση χρήστη 13/10· perilipsi\keimeno_EL_v3.txt / keimeno_EN_v3.txt, αυτούσια μαζί με το Σχήμα 1 και τη λεζάντα του) ===================== -->
   <section id="abstract" class="abstract">
     <h2><span lang="el">Περίληψη</span><span lang="en">Abstract</span></h2>
     <div lang="el">
@@ -198,7 +192,6 @@
       <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones (Figure 1); it is better on ordered structures and worse on disordered ones.</p>
       <p>The binding constraint on accuracy therefore lies in the data, not in the model; curation is not a prerequisite but one of the available levers.</p>
     </div>
-    <!-- Σχήμα 1 της περίληψης (perilipsi\fig_perilipsi_*.pdf), κομμένο σε α/β από το enimerosi.py· λεζάντα αυτούσια -->
     <figure class="absfig">
       <div class="pair" lang="el">
         <a class="zoom" href="figures/abstract-a-el.svg" style="flex-grow: 87.9"><img src="figures/abstract-a-el.svg" alt="(α) Διάμεσο σφάλμα ενέργειας ανά μέγεθος συνόλου εκπαίδευσης: P1c (900 σημεία), P1f (3.000 σημεία) και GAP-20· 0,90× στις 1.000 δομές" width="249" height="128"></a>
@@ -215,8 +208,6 @@
     </figure>
   </section>
 
-  <!-- ===================== ΕΡΩΤΗΜΑ ΚΑΙ ΕΥΡΗΜΑ (poster v2, ζώνη ευρήματος) ===================== -->
-  <!-- Τίτλος του δεύτερου μέρους της σελίδας, μετά την περίληψη (απόφαση χρήστη 13/10) -->
   <section id="poster">
     <h2><span lang="el">Το poster</span><span lang="en">The poster</span></h2>
     <p class="ask">
@@ -228,8 +219,7 @@
       <span lang="en">With <span class="blue">1,000 random, uncurated structures</span>, a GAP potential reaches the accuracy of <span class="red">GAP-20</span>, which was trained on <span class="red nw">6,088 curated ones.</span></span>
     </p>
 
-    <!-- Ένα τετράγωνο ανά δομή εκπαίδευσης, 152 ανά σειρά: 6.088 = 40 × 152 + 8 · 1.000 = 6 × 152 + 88.
-         Οι μπάρες: §11.2, Πίν. 11.1, 0,0103 / 0,0093 = 0,90. -->
+    <!-- One square per training structure, 152 per row -->
     <div class="iso">
       <div>
         <div class="iso-head">
@@ -273,7 +263,6 @@
     </figure>
   </section>
 
-  <!-- ===================== 1 ΜΕΘΟΔΟΣ (poster v2, ενότητα 1) ===================== -->
   <section>
     <h2><span class="n">1</span>
       <span lang="el">1.040 δυναμικά σε τυχαία δείγματα 50–2.000 δομών</span>
@@ -297,7 +286,6 @@
     </figure>
   </section>
 
-  <!-- ===================== 2 ΑΙΤΙΑ (poster v2, ενότητα 2) ===================== -->
   <section>
     <h2><span class="n">2</span>
       <span lang="el">Η καμπύλη κρύβει 3 απωστικές δομές, 14–48× χειρότερες</span>
@@ -321,7 +309,6 @@
     </figure>
   </section>
 
-  <!-- ===================== 3 ΟΙ ΤΡΕΙΣ ΕΝΔΕΙΞΕΙΣ (poster v2, ζώνη· πτυχιακή §12.2) ===================== -->
   <section class="band">
     <h2><span class="n">3</span>
       <span lang="el">Τρεις ανεξάρτητες ενδείξεις: το όριο είναι στα δεδομένα</span>
@@ -371,7 +358,6 @@
     </div>
   </section>
 
-  <!-- ===================== ΣΥΜΠΕΡΑΣΜΑ (poster v2, σκούρα ζώνη· πτυχιακή §12.2, §12.4, §12.5, §11.6) ===================== -->
   <section class="coda">
     <p class="lead">
       <span lang="el">Σε μη επιμελημένη βάση, την ακρίβεια την περιορίζουν τα δεδομένα, όχι το μοντέλο.<span>Η επιμέλεια δεν είναι προαπαιτούμενο, αλλά ένας από τους μοχλούς.</span></span>
@@ -387,7 +373,6 @@
     </p>
   </section>
 
-  <!-- ===================== ΑΝΑΦΟΡΕΣ (APA 7, αυτούσιες από perilipsi\build_docx.py) ===================== -->
   <section>
     <h2><span lang="el">Αναφορές</span><span lang="en">References</span></h2>
     <ol class="refs">
@@ -397,7 +382,6 @@
     </ol>
   </section>
 
-  <!-- ===================== ΕΠΙΚΟΙΝΩΝΙΑ ===================== -->
   <section id="contact" style="border-bottom: 0">
     <h2><span lang="el">Επικοινωνία</span><span lang="en">Contact</span></h2>
     <p>
@@ -446,7 +430,7 @@
     showSizes();
   }
 
-  // Αρχική γλώσσα: ό,τι διάλεξε ο επισκέπτης ή η γλώσσα του κινητού του· αλλιώς ελληνικά
+  // Language: ?lang= in the URL, then the last choice, then the browser language
   let lang = 'el';
   const asked = new URLSearchParams(location.search).get('lang');
   try {
@@ -458,7 +442,7 @@
   setLang(lang);
   buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
 
-  // Μέγεθος κάθε PDF, μόλις η σελίδα σερβίρεται από διακομιστή
+  // Show each PDF's size (works only when served over HTTP)
   new Set([...document.querySelectorAll('[data-size]')].map(s => s.dataset.size)).forEach(async href => {
     try {
       const r = await fetch(href, { method: 'HEAD' });
