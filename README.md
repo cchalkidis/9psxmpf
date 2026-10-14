@@ -17,9 +17,9 @@ Aristotle University of Thessaloniki, 29–30 November 2026 (Topic 5: Computatio
 - **Finding.** With **1,000 random, uncurated structures**, a GAP potential reaches the accuracy of
   **GAP-20**, which was trained on **6,088 curated ones**: a median energy error of **0.0093 eV/atom**
   versus **0.0103 eV/atom**, on the 116 structures that neither model had seen.
-- **Cause.** The limit is set by a few repulsive structures with extreme forces; a larger model does not
+- **Cause.** The limit is set by a few high-energy structures with extreme forces; a larger model does not
   fix them, and GAP-20 fails on the same structures.
-- **Limitations.** Only 3 repulsive structures are in the evaluation set, and the evaluation structures
+- **Limitations.** Only 3 high-energy structures are in the evaluation set, and the evaluation structures
   come from the same database as our samples; the 0.90 ratio is therefore an indication of equivalence,
   not proof of it.
 
@@ -38,9 +38,9 @@ descriptor (Bartók et al., 2013), in eight model settings with ten repetitions 
 them on a common set of 203 structures.
 
 The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through
-overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more
+overfitting but because of rare high-energy structures with extreme forces, which enter larger sets more
 often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers
-the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error
+the error by 40.5% but not the failure rate on these structures, where GAP-20, too, has an error
 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best
 potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088
 curated ones (Figure 1); it is better on ordered structures and worse on disordered ones.

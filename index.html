@@ -184,12 +184,12 @@
     <h2><span lang="el">Περίληψη</span><span lang="en">Abstract</span></h2>
     <div lang="el">
       <p>Τα δυναμικά μηχανικής μάθησης, όπως τα Gaussian Approximation Potentials (GAP; Bartók et al., 2010), προσεγγίζουν την κβαντομηχανική ακρίβεια με κόστος μικρότερο κατά τάξεις μεγέθους, μεταθέτουν όμως τον περιορισμό τους από την αναλυτική μορφή στα δεδομένα, των οποίων η επαναληπτική επιμέλεια απαιτεί χρόνο και εξειδίκευση. Εξετάζεται τι ακρίβεια προκύπτει χωρίς καμία επιμέλεια και τι την περιορίζει. Σύνολα εκπαίδευσης 50 έως 2.000 δομών αντλήθηκαν με στρωματοποιημένη τυχαία δειγματοληψία από την ίδια βάση δεδομένων 17.525 διαμορφώσεων άνθρακα από την οποία προήλθε με επιμέλεια το δημοσιευμένο δυναμικό GAP-20 (Rowe et al., 2020). Εκπαιδεύτηκαν 1.040 δυναμικά με περιγραφέα SOAP (Bartók et al., 2013), σε οκτώ ρυθμίσεις με δέκα επαναλήψεις ανά μέγεθος, και αξιολογήθηκαν σε κοινό σύνολο 203 δομών.</p>
-      <p>Το σφάλμα ενέργειας μειώνεται κατά 43% έως τις 700 περίπου δομές και αυξάνεται κατά 6,6% έως τις 2.000, όχι λόγω υπερπροσαρμογής αλλά εξαιτίας σπάνιων απωστικών δομών με ακραίες δυνάμεις, που εισέρχονται συχνότερα στα μεγαλύτερα σύνολα και υποβαθμίζουν την προσαρμογή. Η δεκαπλάσια χωρητικότητα (από 300 σε 3.000 αντιπροσωπευτικά σημεία) μειώνει το σφάλμα κατά 40,5%, όχι όμως τον ρυθμό αστοχίας στις απωστικές δομές, όπου και το GAP-20 έχει σφάλμα 33 φορές μεγαλύτερο απ’ ό,τι στις υπόλοιπες. Στις 116 δομές αξιολόγησης που δεν είδε ούτε το GAP-20, το καλύτερο δυναμικό φτάνει 0,0093 eV/άτομο έναντι 0,0103 του GAP-20, με 1.000 τυχαίες δομές αντί για 6.088 επιμελημένες (Σχήμα 1)· υπερέχει στις τεταγμένες και υστερεί στις άτακτες δομές.</p>
+      <p>Το σφάλμα ενέργειας μειώνεται κατά 43% έως τις 700 περίπου δομές και αυξάνεται κατά 6,6% έως τις 2.000, όχι λόγω υπερπροσαρμογής αλλά εξαιτίας σπάνιων δομών υψηλής ενέργειας με ακραίες δυνάμεις, που εισέρχονται συχνότερα στα μεγαλύτερα σύνολα και υποβαθμίζουν την προσαρμογή. Η δεκαπλάσια χωρητικότητα (από 300 σε 3.000 αντιπροσωπευτικά σημεία) μειώνει το σφάλμα κατά 40,5%, όχι όμως τον ρυθμό αστοχίας στις δομές αυτές, όπου και το GAP-20 έχει σφάλμα 33 φορές μεγαλύτερο απ’ ό,τι στις υπόλοιπες. Στις 116 δομές αξιολόγησης που δεν είδε ούτε το GAP-20, το καλύτερο δυναμικό φτάνει 0,0093 eV/άτομο έναντι 0,0103 του GAP-20, με 1.000 τυχαίες δομές αντί για 6.088 επιμελημένες (Σχήμα 1)· υπερέχει στις τεταγμένες και υστερεί στις άτακτες δομές.</p>
       <p>Ο δεσμευτικός περιορισμός της ακρίβειας βρίσκεται επομένως στα δεδομένα, όχι στο μοντέλο· η επιμέλεια δεν είναι προαπαιτούμενο αλλά ένας από τους διαθέσιμους μοχλούς.</p>
     </div>
     <div lang="en">
       <p>Machine learning potentials such as Gaussian Approximation Potentials (GAP; Bartók et al., 2010) approach quantum-mechanical accuracy at a cost orders of magnitude lower, but they shift their limitation from the functional form to the data, whose iterative curation demands time and expertise. We examine what accuracy is obtained without any curation, and what limits it. Training sets of 50 to 2,000 structures were drawn by stratified random sampling from the same database of 17,525 carbon configurations from which the published GAP-20 potential was curated (Rowe et al., 2020). We trained 1,040 potentials with the SOAP descriptor (Bartók et al., 2013), in eight model settings with ten repetitions per size, and evaluated them on a common set of 203 structures.</p>
-      <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare repulsive structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on the repulsive structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones (Figure 1); it is better on ordered structures and worse on disordered ones.</p>
+      <p>The energy error falls by 43% up to about 700 structures and then rises by 6.6% up to 2,000, not through overfitting but because of rare high-energy structures with extreme forces, which enter larger sets more often and degrade the fit. A tenfold increase in capacity (from 300 to 3,000 representative points) lowers the error by 40.5% but not the failure rate on these structures, where GAP-20, too, has an error 33 times larger than on the rest. On the 116 evaluation structures that neither model had seen, the best potential reaches 0.0093 eV/atom versus 0.0103 for GAP-20, using 1,000 random structures instead of 6,088 curated ones (Figure 1); it is better on ordered structures and worse on disordered ones.</p>
       <p>The binding constraint on accuracy therefore lies in the data, not in the model; curation is not a prerequisite but one of the available levers.</p>
     </div>
     <figure class="absfig">
@@ -288,23 +288,23 @@
 
   <section>
     <h2><span class="n">2</span>
-      <span lang="el">Η καμπύλη κρύβει 3 απωστικές δομές, 14–48× χειρότερες</span>
-      <span lang="en">The curve hides 3 repulsive structures, 14–48× worse</span>
+      <span lang="el">Η καμπύλη κρύβει 3 δομές υψηλής ενέργειας, 14–48× χειρότερες</span>
+      <span lang="en">The curve hides 3 high-energy structures, 14–48× worse</span>
     </h2>
     <figure>
-      <a class="zoom" href="figures/diagnosis-el.svg" lang="el"><img src="figures/diagnosis-el.svg" alt="Καμπύλη μάθησης στις 203 δομές (−43,0% έως τις 700, +6,6% έως τις 2.000) και το ίδιο σφάλμα χωριστά για 3 απωστικές και 200 κανονικές δομές" loading="lazy"></a>
-      <a class="zoom" href="figures/diagnosis-en.svg" lang="en"><img src="figures/diagnosis-en.svg" alt="Learning curve on the 203 structures (−43.0% up to 700, +6.6% up to 2,000) and the same error split into 3 repulsive and 200 normal structures" loading="lazy"></a>
+      <a class="zoom" href="figures/diagnosis-el.svg" lang="el"><img src="figures/diagnosis-el.svg" alt="Καμπύλη μάθησης στις 203 δομές (−43,0% έως τις 700, +6,6% έως τις 2.000) και το ίδιο σφάλμα χωριστά για 3 δομές υψηλής ενέργειας και 200 κανονικές" loading="lazy"></a>
+      <a class="zoom" href="figures/diagnosis-en.svg" lang="en"><img src="figures/diagnosis-en.svg" alt="Learning curve on the 203 structures (−43.0% up to 700, +6.6% up to 2,000) and the same error split into 3 high-energy and 200 normal structures" loading="lazy"></a>
       <figcaption class="cap">
         <span lang="el">Η άνοδος δεν είναι υπερπροσαρμογή (το χάσμα εκπαίδευσης–αξιολόγησης κλείνει, <span class="nw">7,6× → 1,1×</span>): τη φέρνουν λίγες ακραίες δομές, που δεν προβλέπονται και χαλούν την προσαρμογή όταν μπουν στην εκπαίδευση.</span>
         <span lang="en">The rise is not overfitting (the training–validation gap closes, <span class="nw">7.6× → 1.1×</span>): it comes from a few extreme structures, which are not predicted and which spoil the fit when they enter training.</span>
       </figcaption>
     </figure>
     <figure>
-      <a class="zoom" href="figures/structures-el.svg" lang="el"><img src="figures/structures-el.svg" alt="Οι τρεις απωστικές δομές: κρυσταλλική (10 άτομα), διμερές (2 άτομα, 2,83 Å), υγρό (216 άτομα)" loading="lazy"></a>
-      <a class="zoom" href="figures/structures-en.svg" lang="en"><img src="figures/structures-en.svg" alt="The three repulsive structures: crystalline (10 atoms), dimer (2 atoms, 2.83 Å), liquid (216 atoms)" loading="lazy"></a>
+      <a class="zoom" href="figures/structures-el.svg" lang="el"><img src="figures/structures-el.svg" alt="Οι τρεις δομές υψηλής ενέργειας: κρυσταλλική (10 άτομα), διμερές (2 άτομα, 2,83 Å), υγρό (216 άτομα)" loading="lazy"></a>
+      <a class="zoom" href="figures/structures-en.svg" lang="en"><img src="figures/structures-en.svg" alt="The three high-energy structures: crystalline (10 atoms), dimer (2 atoms, 2.83 Å), liquid (216 atoms)" loading="lazy"></a>
       <figcaption class="cap">
-        <span lang="el">Απωστική: ενέργεια DFT πάνω από −4&nbsp;eV/άτομο· οι κανονικές έχουν διάμεσο −7,20.</span>
-        <span lang="en">Repulsive: DFT energy above −4&nbsp;eV/atom; the normal structures have a median of −7.20.</span>
+        <span lang="el">Κριτήριο: ενέργεια DFT πάνω από −4&nbsp;eV/άτομο· οι κανονικές έχουν διάμεσο −7,20.</span>
+        <span lang="en">Criterion: DFT energy above −4&nbsp;eV/atom; the normal structures have a median of −7.20.</span>
       </figcaption>
     </figure>
   </section>
@@ -317,11 +317,11 @@
 
     <div class="panel">
       <h3><span class="l"><span lang="el">α</span><span lang="en">a</span></span>
-        <span lang="el">Μεγαλύτερο μοντέλο: καλύτερο στις κανονικές, όχι στις απωστικές</span>
-        <span lang="en">A larger model: better on the normal structures, not on the repulsive ones</span></h3>
+        <span lang="el">Μεγαλύτερο μοντέλο: καλύτερο στις κανονικές, όχι στις υψηλής ενέργειας</span>
+        <span lang="en">A larger model: better on the normal structures, not on the high-energy ones</span></h3>
       <figure>
-        <a class="zoom" href="figures/evidence-a-el.svg" lang="el"><img src="figures/evidence-a-el.svg" alt="Σφάλμα στις κανονικές και αστοχία στις απωστικές για 300, 1.500 και 3.000 σημεία" loading="lazy"></a>
-        <a class="zoom" href="figures/evidence-a-en.svg" lang="en"><img src="figures/evidence-a-en.svg" alt="Error on the normal structures and failure rate on the repulsive ones for 300, 1,500 and 3,000 points" loading="lazy"></a>
+        <a class="zoom" href="figures/evidence-a-el.svg" lang="el"><img src="figures/evidence-a-el.svg" alt="Σφάλμα στις κανονικές και αστοχία στις υψηλής ενέργειας για 300, 1.500 και 3.000 σημεία" loading="lazy"></a>
+        <a class="zoom" href="figures/evidence-a-en.svg" lang="en"><img src="figures/evidence-a-en.svg" alt="Error on the normal structures and failure rate on the high-energy ones for 300, 1,500 and 3,000 points" loading="lazy"></a>
         <figcaption class="cap">
           <span lang="el">Συνολικά −40,5% για 10× σημεία. Το σφάλμα του είχε προβλεφθεί πριν από την εκπαίδευση (0,0146–0,0166&nbsp;eV/άτομο)· μετρήθηκε 0,0152.</span>
           <span lang="en">Overall −40.5% for 10× the points. Its error was predicted before training (0.0146–0.0166&nbsp;eV/atom); the measured value was 0.0152.</span>
@@ -331,11 +331,11 @@
 
     <div class="panel">
       <h3><span class="l"><span lang="el">β</span><span lang="en">b</span></span>
-        <span lang="el">Άλλη εκπαίδευση: ό,τι κερδίζουν οι κανονικές το χάνουν οι απωστικές</span>
-        <span lang="en">Different training: what the normal structures gain, the repulsive ones lose</span></h3>
+        <span lang="el">Άλλη εκπαίδευση: κερδίζουν οι κανονικές, χάνουν οι υψηλής ενέργειας</span>
+        <span lang="en">Different training: what the normal structures gain, the high-energy ones lose</span></h3>
       <figure>
-        <a class="zoom" href="figures/evidence-b-el.svg" lang="el"><img src="figures/evidence-b-el.svg" alt="Αστοχία σε κανονικές και απωστικές για ενιαία ανοχή, αναφορά και φιλτράρισμα" loading="lazy"></a>
-        <a class="zoom" href="figures/evidence-b-en.svg" lang="en"><img src="figures/evidence-b-en.svg" alt="Failure rate on normal and repulsive structures for uniform tolerance, reference and filtering" loading="lazy"></a>
+        <a class="zoom" href="figures/evidence-b-el.svg" lang="el"><img src="figures/evidence-b-el.svg" alt="Αστοχία σε κανονικές και υψηλής ενέργειας για ενιαία ανοχή, αναφορά και φιλτράρισμα" loading="lazy"></a>
+        <a class="zoom" href="figures/evidence-b-en.svg" lang="en"><img src="figures/evidence-b-en.svg" alt="Failure rate on normal and high-energy structures for uniform tolerance, reference and filtering" loading="lazy"></a>
         <figcaption class="cap">
           <span lang="el">Αστοχία: σφάλμα &gt;&nbsp;1&nbsp;eV/άτομο. Ενιαία ανοχή για όλες τις δομές· φιλτράρισμα: χωρίς δομές με δύναμη &gt;&nbsp;50&nbsp;eV/Å.</span>
           <span lang="en">Failure: error &gt;&nbsp;1&nbsp;eV/atom. Uniform tolerance for all structures; filtering: no structures with a force &gt;&nbsp;50&nbsp;eV/Å.</span>
@@ -348,8 +348,8 @@
         <span lang="el">Το GAP-20 αποτυγχάνει στις ίδιες δομές</span>
         <span lang="en">GAP-20 fails on the same structures</span></h3>
       <figure>
-        <a class="zoom" href="figures/evidence-c-el.svg" lang="el"><img src="figures/evidence-c-el.svg" alt="Σφάλμα του GAP-20: 0,0131 στις κανονικές, 0,4360 στις απωστικές, 33×" loading="lazy"></a>
-        <a class="zoom" href="figures/evidence-c-en.svg" lang="en"><img src="figures/evidence-c-en.svg" alt="GAP-20 error: 0.0131 on normal, 0.4360 on repulsive structures, 33×" loading="lazy"></a>
+        <a class="zoom" href="figures/evidence-c-el.svg" lang="el"><img src="figures/evidence-c-el.svg" alt="Σφάλμα του GAP-20: 0,0131 στις κανονικές, 0,4360 στις υψηλής ενέργειας, 33×" loading="lazy"></a>
+        <a class="zoom" href="figures/evidence-c-en.svg" lang="en"><img src="figures/evidence-c-en.svg" alt="GAP-20 error: 0.0131 on normal, 0.4360 on high-energy structures, 33×" loading="lazy"></a>
         <figcaption class="cap">
           <span lang="el">Ίδια τάξη μεγέθους με το δικό μας 14–48×, παρά την επιμέλεια και τα 9.000 σημεία του.</span>
           <span lang="en">The same order of magnitude as our 14–48×, despite its curation and its 9,000 points.</span>
@@ -364,12 +364,12 @@
       <span lang="en">On an uncurated database, accuracy is limited by the data, not by the model.<span>Curation is not a prerequisite, but one of the levers.</span></span>
     </p>
     <p>
-      <span lang="el"><b>Επόμενο βήμα:</b> περισσότερες απωστικές δομές στην εκπαίδευση, με ενεργή μάθηση από τη διαφωνία μιας επιτροπής μοντέλων.</span>
-      <span lang="en"><b>Next step:</b> more repulsive structures in training, through active learning driven by the disagreement of a committee of models.</span>
+      <span lang="el"><b>Επόμενο βήμα:</b> περισσότερες δομές υψηλής ενέργειας στην εκπαίδευση, με ενεργή μάθηση από τη διαφωνία μιας επιτροπής μοντέλων.</span>
+      <span lang="en"><b>Next step:</b> more high-energy structures in training, through active learning driven by the disagreement of a committee of models.</span>
     </p>
     <p>
-      <span lang="el"><b>Περιορισμοί:</b> μόνο 3 απωστικές δομές αξιολόγησης· η αξιολόγηση προέρχεται από την ίδια βάση με τα δείγματά μας, άρα το 0,90 είναι ένδειξη ισοδυναμίας.</span>
-      <span lang="en"><b>Limitations:</b> only 3 repulsive evaluation structures; the evaluation set comes from the same database as our samples, so the 0.90 is an indication of equivalence.</span>
+      <span lang="el"><b>Περιορισμοί:</b> μόνο 3 δομές αξιολόγησης υψηλής ενέργειας· η αξιολόγηση προέρχεται από την ίδια βάση με τα δείγματά μας, άρα το 0,90 είναι ένδειξη ισοδυναμίας.</span>
+      <span lang="en"><b>Limitations:</b> only 3 high-energy evaluation structures; the evaluation set comes from the same database as our samples, so the 0.90 is an indication of equivalence.</span>
     </p>
   </section>
 
