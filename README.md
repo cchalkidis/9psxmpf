@@ -86,6 +86,6 @@ infrastructure.
 
 ## Contact
 
-Christos Chalkidis · chalchri@chem.auth.gr
+Christos Chalkidis · contact@chalkidis.eu (or chalchri@chem.auth.gr)
 
 © 2026 C. D. Chalkidis and G. Fanourgakis. All rights reserved.
