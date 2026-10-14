@@ -81,7 +81,7 @@ the undergraduate thesis on which the poster is based.
 
 ## Acknowledgements
 
-We thank the IT Center of the Aristotle University of Thessaloniki for the “Aristotle” computing
+We thank the IT Center of the Aristotle University of Thessaloniki for the “Aristotelis” computing
 infrastructure.
 
 ## Contact
